@@ -1,4 +1,4 @@
-import { Scene, Engine, FreeCamera, Vector3, HemisphericLight, MeshBuilder, SceneLoader, ArcRotateCamera } from '@babylonjs/core'
+import { Scene, Engine, FreeCamera, Vector3, HemisphericLight, MeshBuilder, SceneLoader, ArcRotateCamera, CubeTexture, PhotoDome } from '@babylonjs/core'
 import "@babylonjs/loaders"
 
 export class ImportModels {
@@ -26,6 +26,13 @@ export class ImportModels {
 
         const hemiLight = new HemisphericLight("hemiLight", new Vector3(0, 1, 0), this.scene)
         hemiLight.intensity = 0.8
+
+        // skybox
+        const dome = new PhotoDome(
+            "testdome",
+            "./textures/sky/cerulux1.png", {resolution: 32, size: 1000},
+            scene
+        )
 
         //const ground = MeshBuilder.CreateGround("ground", {width: 10, height: 10}, this.scene)
 

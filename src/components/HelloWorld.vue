@@ -26,7 +26,7 @@ export default defineComponent({
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 canvas{
-  width: 70%;
+  width: 80%;
   height: 70%;
 }
 </style>
